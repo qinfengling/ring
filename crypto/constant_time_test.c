@@ -204,7 +204,7 @@ int bssl_constant_time_test_main(void) {
        i < sizeof(signed_test_values) / sizeof(signed_test_values[0]); ++i) {
     int a = signed_test_values[i];
     for (size_t j = 0;
-         j < sizeof(signed_test_values) / sizeof(signed_test_values); ++j) {
+         j < sizeof(signed_test_values) / sizeof(signed_test_values[0]); ++j) {
       int b = signed_test_values[j];
       num_failed += test_eq_int(a, b);
     }
